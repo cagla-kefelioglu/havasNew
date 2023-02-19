@@ -22,17 +22,12 @@ class MusicCard extends StatelessWidget {
             width: width * 1,
             child: GrockContainer(
               onTap: () async {
-                Future _openDialog(context) => showDialog(
-                      barrierDismissible: false,
-                      barrierColor: Constant.popat,
-                      context: context,
-                      builder: ((context) => TwoDialogPopat()),
-                    );
+                _openDialog(context);
                 print("Çalışıyor :)");
               },
               height: 60,
               child: Padding(
-                padding: EdgeInsets.only(left: width * 0.05),
+                padding: const EdgeInsets.only(left: 10.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -79,17 +74,13 @@ class MusicCard extends StatelessWidget {
             width: width * 1,
             child: GrockContainer(
               onTap: () async {
-                Future _openDialog(context) => showDialog(
-                      barrierDismissible: false,
-                      barrierColor: Constant.popat,
-                      context: context,
-                      builder: ((context) => TwoDialogPopat()),
-                    );
+                _openDialog(context);
+
                 print("Çalışıyor :)");
               },
               height: 60,
               child: Padding(
-                padding: EdgeInsets.only(left: width * 0.05),
+                padding: const EdgeInsets.only(left: 10.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -136,17 +127,13 @@ class MusicCard extends StatelessWidget {
             width: width * 1,
             child: GrockContainer(
               onTap: () async {
-                Future _openDialog(context) => showDialog(
-                      barrierDismissible: false,
-                      barrierColor: Constant.popat,
-                      context: context,
-                      builder: ((context) => TwoDialogPopat()),
-                    );
+                _openDialog(context);
+
                 print("Çalışıyor :)");
               },
               height: 60,
               child: Padding(
-                padding: EdgeInsets.only(left: width * 0.05),
+                padding: const EdgeInsets.only(left: 10.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -194,6 +181,12 @@ class MusicCard extends StatelessWidget {
     );
   }
 
+  Future _openDialog(context) => showDialog(
+        barrierDismissible: false,
+        barrierColor: Constant.popat,
+        context: context,
+        builder: ((context) => TwoDialogPopat()),
+      );
   TextStyle _textStyle = TextStyle(
       color: Constant.dark,
       fontSize: 15,

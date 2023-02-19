@@ -18,7 +18,7 @@ class Titlee extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         Padding(
-          padding: EdgeInsets.only(right: 10),
+          padding: EdgeInsets.only(right: 8),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.end,
@@ -33,7 +33,7 @@ class Titlee extends StatelessWidget {
                     decoration: TextDecoration.none),
               ),
               SizedBox(
-                width: width * 0.9,
+                width: width * 0.95,
                 height: 1,
                 child: Container(color: Constant.dark),
               )

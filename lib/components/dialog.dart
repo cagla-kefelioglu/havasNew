@@ -4,13 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
 import '../../assets.dart';
-
 import 'dart:convert';
-
 import '../constant/constant.dart';
-
 //import 'package:http/http.dart' as http;
 
 class TwoDialogPopat extends StatelessWidget {
@@ -47,35 +43,18 @@ class TwoDialogPopat extends StatelessWidget {
                   //  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 8.0, top: 10),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Toplantı Konusu :",
-                                style: _text.copyWith(
-                                    fontWeight: FontWeight.w500,
-                                    color: Constant.orange),
-                              ),
-                              Container(
-                                width: width * 0.7,
-                                child: Text("info.appointment_description",
-                                    style: _text),
-                              ),
-                            ],
-                          ),
-                        ),
                         IconButton(
                           onPressed: () {
                             Navigator.of(context).pop();
                           },
-                          icon: SvgPicture.asset(Assets.icons.closeSVG,
-                              width: 33),
+                          icon: SvgPicture.asset(
+                            Assets.icons.closeSVG,
+                            width: 33,
+                            color: Constant.dark,
+                          ),
                         )
                       ],
                     ),
@@ -83,60 +62,47 @@ class TwoDialogPopat extends StatelessWidget {
                       height: 4,
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(
-                          left: 8.0, right: 8.0, bottom: 8.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Katılımcılar : ",
-                            style: _text.copyWith(
-                                fontWeight: FontWeight.w500,
-                                color: Constant.orange),
-                          ),
-                          Container(
-                            width: width * 0.7,
-                            child: Wrap(
-                              spacing: width * 0.01,
-                              children: [
-                                // for (int i = 0;
-                                //     i < info.katilimci.length;
-                                //     i++)
-                                //   Text(
-                                //     info.katilimci[i] + ",",
-                                //     style: _text,
-                                //   ),
-                                Text("info.appointment_taker_first_name")
-                              ],
+                        padding: const EdgeInsets.only(
+                            left: 8.0, right: 8.0, bottom: 8.0),
+                        child: Column(
+                          children: [
+                            Container(
+                              height: height * 0.4,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                image: AssetImage("assets/images/img2.jpeg"),
+                                fit: BoxFit.contain,
+                              )),
                             ),
-                          ),
-                          Row(
-                            children: [
-                              Text("Onaylandı :",
-                                  style: _text.copyWith(
-                                      fontWeight: FontWeight.w500,
-                                      color: Constant.green)),
-                              Text(
-                                "Çağla(Sekreter)",
-                                style: _text,
-                              )
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              Text("info.durum",
-                                  style: _text.copyWith(
-                                      fontWeight: FontWeight.w500,
-                                      color: Constant.red))
-                            ],
-                          ),
-
-                          //butonlar
-                        ],
-                      ),
-                    ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Under The Influence",
+                                        style: TextStyle(
+                                            fontFamily: 'PoppinsBold',
+                                            fontWeight: FontWeight.w800),
+                                      ),
+                                      Text("Chris Brown"),
+                                    ],
+                                  ),
+                                  Text("3:64")
+                                ],
+                              ),
+                            )
+                          ],
+                        )),
                   ]),
             ),
           ],
@@ -146,6 +112,7 @@ class TwoDialogPopat extends StatelessWidget {
   BoxDecoration _clikDecoration = BoxDecoration(
     color: Constant.darkWhite,
     borderRadius: BorderRadius.circular(20),
+    border: Border.all(width: 1.0, color: Constant.dark),
   );
   TextStyle _text = TextStyle(
       fontFamily: 'Roboto',

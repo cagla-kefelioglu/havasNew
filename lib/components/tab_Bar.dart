@@ -7,7 +7,6 @@ import '../assets.dart';
 import '../constant/constant.dart';
 
 class Tab_bar extends StatelessWidget {
-  var now = DateTime.now();
   //var year = now.day;
 
   var title;
@@ -24,8 +23,7 @@ class Tab_bar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Padding(
-            padding:
-                EdgeInsets.only(left: 10.0, top: height * 0.06, right: 10.0),
+            padding: EdgeInsets.only(left: 8, top: height * 0.06, right: 10.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
