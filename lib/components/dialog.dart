@@ -5,11 +5,12 @@ import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../Constant/constant.dart';
-
 import '../../assets.dart';
 
 import 'dart:convert';
+
+import '../constant/constant.dart';
+
 //import 'package:http/http.dart' as http;
 
 class TwoDialogPopat extends StatelessWidget {

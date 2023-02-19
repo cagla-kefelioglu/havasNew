@@ -1,9 +1,10 @@
-// ignore_for_file: unused_import, file_names, use_key_in_widget_constructors, must_be_immutable, unused_local_variable, prefer_final_fields, prefer_const_constructors, prefer_const_literals_to_create_immutables, unused_field
+// ignore_for_file: unused_import, file_names, use_key_in_widget_constructors, must_be_immutable, unused_local_variable, prefer_final_fields, prefer_const_constructors, prefer_const_literals_to_create_immutables, unused_field, unused_element, avoid_print
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:grock/grock.dart';
-import 'package:havas/constant/constant.dart';
+
+import '../constant/constant.dart';
 import '../assets.dart';
 import 'dialog.dart';
 
@@ -21,9 +22,14 @@ class MusicCard extends StatelessWidget {
           SizedBox(
             width: width * 1,
             child: GrockContainer(
-              color: Colors.amber,
-              onTap: () {
-                _openDialog(context);
+              onTap: () async {
+                Future _openDialog(context) => showDialog(
+                      barrierDismissible: false,
+                      barrierColor: Constant.popat,
+                      context: context,
+                      builder: ((context) => TwoDialogPopat()),
+                    );
+                print("Çalışıyor :)");
               },
               height: 60,
               child: Padding(
@@ -73,6 +79,15 @@ class MusicCard extends StatelessWidget {
           SizedBox(
             width: width * 1,
             child: GrockContainer(
+              onTap: () async {
+                Future _openDialog(context) => showDialog(
+                      barrierDismissible: false,
+                      barrierColor: Constant.popat,
+                      context: context,
+                      builder: ((context) => TwoDialogPopat()),
+                    );
+                print("Çalışıyor :)");
+              },
               height: 60,
               child: Padding(
                 padding: EdgeInsets.only(left: width * 0.05),
@@ -121,6 +136,15 @@ class MusicCard extends StatelessWidget {
           SizedBox(
             width: width * 1,
             child: GrockContainer(
+              onTap: () async {
+                Future _openDialog(context) => showDialog(
+                      barrierDismissible: false,
+                      barrierColor: Constant.popat,
+                      context: context,
+                      builder: ((context) => TwoDialogPopat()),
+                    );
+                print("Çalışıyor :)");
+              },
               height: 60,
               child: Padding(
                 padding: EdgeInsets.only(left: width * 0.05),
@@ -178,9 +202,3 @@ class MusicCard extends StatelessWidget {
       fontWeight: FontWeight.w400,
       letterSpacing: 0.5);
 }
-
-Future _openDialog(context) => showDialog(
-    barrierDismissible: false,
-    barrierColor: Constant.popat,
-    context: context,
-    builder: ((context) => TwoDialogPopat()));
